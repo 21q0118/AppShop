@@ -1,0 +1,275 @@
+<template>
+  <el-container class="layout-container">
+    <sysstaticheader />
+    <el-main style="height: 100vh; background: rgb(255,255,255); padding: 0; z-index: 8">
+      <div class="title"
+        style="text-align: center; font-size: 20px; width: 100%; z-index: 10; margin-top: 60px; font-family: 'MiSans'; background: #6c757d; color: #ffffff; padding: 20px 0;">
+        发布新应用
+      </div>
+      <div style="margin: 15px auto; width: 50%; display: flex; flex-direction: column; align-items: center;">
+
+        <el-upload class="avatar-uploader" action="api/app/uploadIcon" :show-file-list="false"
+          :on-success="handleAvatarSuccess" :before-upload="beforeAvatarUpload" name="icon">
+          <img v-if="imageUrl" :src="imageUrl" class="avatar" />
+          <el-icon v-else class="avatar-uploader-icon">
+            <Plus />
+          </el-icon>
+        </el-upload>
+
+        <div class="appName" style="margin-bottom: 15px; width: 100%;">
+          <el-text style="font-family: 'MiSans'; margin-bottom: 20px;">应用名称：</el-text>
+          <el-input v-model="form.appName" placeholder="请输入应用名称"
+            style="font-family: 'MiSans'; font-weight: lighter; height: 35px; width: 100%;"></el-input>
+        </div>
+        <div class="version" style="margin-bottom: 15px; width: 100%;">
+          <el-text style="font-family: 'MiSans'; margin-bottom: 20px;">版本号：</el-text>
+          <el-input v-model="form.version" placeholder="请输入应用版本号"
+            style="font-family: 'MiSans'; font-weight: lighter; height: 35px; width: 100%;"></el-input>
+        </div>
+        <div class="tag" style="margin-bottom: 15px; width: 100%;">
+          <el-text style="font-family: 'MiSans'; margin-bottom: 20px;">选择应用分区：</el-text>
+          <el-select v-model="value" clearable placeholder="Select" style="width: 100%;">
+            <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
+          </el-select>
+        </div>
+        <div class="index" style="margin-bottom: 15px; width: 100%;">
+          <el-text style="font-family: 'MiSans'; margin-bottom: 20px;">应用简介：</el-text>
+          <el-input v-model="form.index" placeholder="请输入应用简介"
+            style="font-family: 'MiSans'; font-weight: lighter; width: 100%;" :autosize="{ minRows: 2, maxRows: 4 }"
+            type="textarea" />
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+          <el-button type="primary" @click="triggerFilePicker" style="margin-bottom: 10px;">选择文件</el-button>
+          <div id="upload-list" style="width: 100%; text-align: center; margin-bottom: 10px;"></div>
+          <input type="file" id="file-picker" style="display: none" @change="handleFileChange" />
+        </div>
+        <hr style="width: 100%;" />
+        <div class="addbutton">
+          <el-button color="#c05f6c" style="width: 100px; font-family: 'MiSans';" @click="add">发布新应用</el-button>
+        </div>
+      </div>
+    </el-main>
+  </el-container>
+</template>
+
+<script lang="ts" setup>
+import axios from 'axios'
+import router from '@/router'
+import store from '@/stores'
+import { ElMessage } from 'element-plus';
+import { reactive, ref } from 'vue'
+import Sysstaticheader from '@/components/header/Sysstaticheader.vue'
+
+import { Plus } from '@element-plus/icons-vue'
+
+import type { UploadProps } from 'element-plus'
+
+const imageUrl = ref('')
+var iconURL;
+
+const handleAvatarSuccess: UploadProps['onSuccess'] = (response, uploadFile) => {
+  if (response.code === 200) {
+    imageUrl.value = URL.createObjectURL(uploadFile.raw!);// Save the returned image URL
+    ElMessage.success('上传成功');
+    iconURL = response.data;
+  } else {
+    ElMessage.error('上传失败');
+  }
+}
+
+
+const beforeAvatarUpload: UploadProps['beforeUpload'] = (rawFile) => {
+  if (rawFile.type !== 'image/jpeg') {
+    ElMessage.error('Avatar picture must be JPG format!')
+    return false
+  } else if (rawFile.size / 1024 / 1024 > 2) {
+    ElMessage.error('Avatar picture size can not exceed 2MB!')
+    return false
+  }
+  return true
+}
+
+let fileName: string | null = null;
+let size: number | null = null;
+const value = ref('')
+const options = [
+  { value: '1', label: '游戏' },
+  { value: '2', label: '社交' },
+  { value: '3', label: '媒体' },
+  { value: '4', label: '办公' },
+  { value: '5', label: '购物' },
+  { value: '6', label: '教育' },
+  { value: '7', label: '医疗' },
+  { value: '8', label: '金融' },
+  { value: '9', label: '旅游' },
+  { value: '10', label: '摄影' }
+]
+
+const form = reactive({
+  appName: '',
+  version: '',
+  index: ''
+})
+
+const triggerFilePicker = () => {
+  const filePicker = document.getElementById('file-picker') as HTMLInputElement;
+  if (filePicker) {
+    filePicker.click();
+  }
+};
+
+const handleFileChange = (event: Event) => {
+  const input = event.target as HTMLInputElement;
+  const files = input.files;
+  const uploadList = document.getElementById('upload-list');
+
+  if (files && files.length > 0) {
+    const file = files[0];
+
+    if (uploadList) {
+      uploadList.innerHTML = '';  // Clear previous uploads
+    }
+
+    fileName = file.name;
+    size = file.size / 1024 / 1024;
+    uploadFile(file);
+  }
+};
+
+const uploadFile = (file: File) => {
+  const formData = new FormData();
+  formData.append('file', file);
+
+  axios.post('/api/app/upload', formData, {
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    }
+  }).then(res => {
+    console.log(res);
+    if (res.data.code === 200) {
+      const uploadList = document.getElementById('upload-list');
+      if (uploadList) {
+        const item = document.createElement('div');
+        item.className = 'item';
+        item.innerHTML = `<h4 class="info">${file.name}</h4><p class="state">上传成功</p>`;
+        uploadList.appendChild(item);
+      }
+    } else {
+      ElMessage.error('上传失败');
+    }
+  }).catch(err => {
+    console.error(err);
+    ElMessage.error('上传失败，请重试！');
+  });
+};
+
+const addapp = reactive({
+    appName: form.appName,
+    version: form.version,
+    index: form.index,
+    tag: value.value,
+    apk: fileName,
+    size: size,
+    icon: iconURL
+  })
+
+const add = () => {
+  if (form.appName === '' || form.version === '' || form.index === '' || !fileName) {
+    ElMessage.error('请完整输入app信息并选择文件！')
+  } else {
+    axios.post(`/api/addApp?telephone=${store.state.id}`,
+      {
+        headers: {
+          'Content-Type':'application/json',
+          token: store.state.token,
+        },
+          appName: form.appName,
+          version: form.version,
+          index: form.index,
+          tag: value.value,
+          apk: fileName,
+          size: size,
+          icon: iconURL
+      }).then(res => {
+        console.log(res)
+        if (res.data.code === 200) {
+          ElMessage.success('添加成功')
+          router.push('/appDisplay')
+        } else if (res.data.code === 400) {
+          ElMessage.error('添加失败')
+        }
+      }).catch(err => {
+        console.error(err);
+        ElMessage.error('发布失败，请重试！');
+      });
+  }
+};
+</script>
+
+<style>
+#upload-container {
+  width: 150px;
+  height: 50px;
+  background: #94d3e7;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.progress {
+  margin-top: 10px;
+}
+
+.addbutton {
+  margin-left: 4px;
+  margin-top: 50px;
+}
+
+.item {
+  margin-bottom: 10px;
+}
+
+.info {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.state {
+  font-size: 12px;
+  color: #999;
+}
+</style>
+
+
+<style scoped>
+.avatar-uploader .avatar {
+  width: 178px;
+  height: 178px;
+  display: block;
+}
+</style>
+
+<style>
+.avatar-uploader .el-upload {
+  border: 1px dashed var(--el-border-color);
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: var(--el-transition-duration-fast);
+}
+
+.avatar-uploader .el-upload:hover {
+  border-color: var(--el-color-primary);
+}
+
+.el-icon.avatar-uploader-icon {
+  font-size: 28px;
+  color: #8c939d;
+  width: 178px;
+  height: 178px;
+  text-align: center;
+}
+</style>
