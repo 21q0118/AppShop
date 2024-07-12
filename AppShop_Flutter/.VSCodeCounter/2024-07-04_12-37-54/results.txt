@@ -1,0 +1,122 @@
+Date : 2024-07-04 12:37:54
+Directory : d:\CODE_Android\group\ssbaz\app_shop
+Total : 51 files,  6659 codes, 297 comments, 555 blanks, all 7511 lines
+
+Languages
++-----------------+------------+------------+------------+------------+------------+
+| language        | files      | code       | comment    | blank      | total      |
++-----------------+------------+------------+------------+------------+------------+
+| Dart            |         28 |      6,139 |         98 |        473 |      6,710 |
+| JSON            |          2 |        145 |          0 |          2 |        147 |
+| XML             |          9 |        138 |         46 |         12 |        196 |
+| Groovy          |          3 |         88 |          5 |         21 |        114 |
+| Java            |          1 |         69 |         73 |          9 |        151 |
+| YAML            |          2 |         48 |         73 |         25 |        146 |
+| Objective-C     |          2 |         17 |          1 |          6 |         24 |
+| Java Properties |          2 |          8 |          1 |          2 |         11 |
+| C++             |          1 |          4 |          0 |          3 |          7 |
+| Markdown        |          1 |          3 |          0 |          2 |          5 |
++-----------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                  | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                     |         51 |      6,659 |        297 |        555 |      7,511 |
+| . (Files)                                                                                             |          2 |         48 |         73 |         25 |        146 |
+| android                                                                                               |         13 |        242 |        123 |         42 |        407 |
+| android (Files)                                                                                       |          3 |         38 |          0 |         10 |         48 |
+| android\app                                                                                           |          9 |        199 |        122 |         31 |        352 |
+| android\app (Files)                                                                                   |          1 |         53 |          5 |         12 |         70 |
+| android\app\src                                                                                       |          8 |        146 |        117 |         19 |        282 |
+| android\app\src\debug                                                                                 |          1 |          4 |          3 |          1 |          8 |
+| android\app\src\main                                                                                  |          6 |        130 |        111 |         17 |        258 |
+| android\app\src\main (Files)                                                                          |          1 |         35 |          6 |          2 |         43 |
+| android\app\src\main\java                                                                             |          1 |         69 |         73 |          9 |        151 |
+| android\app\src\main\java\com                                                                         |          1 |         69 |         73 |          9 |        151 |
+| android\app\src\main\java\com\example                                                                 |          1 |         69 |         73 |          9 |        151 |
+| android\app\src\main\java\com\example\app_shop                                                        |          1 |         69 |         73 |          9 |        151 |
+| android\app\src\main\res                                                                              |          4 |         26 |         32 |          6 |         64 |
+| android\app\src\main\res\drawable                                                                     |          1 |          4 |          7 |          2 |         13 |
+| android\app\src\main\res\drawable-v21                                                                 |          1 |          4 |          7 |          2 |         13 |
+| android\app\src\main\res\values                                                                       |          1 |          9 |          9 |          1 |         19 |
+| android\app\src\main\res\values-night                                                                 |          1 |          9 |          9 |          1 |         19 |
+| android\app\src\profile                                                                               |          1 |         12 |          3 |          1 |         16 |
+| android\gradle                                                                                        |          1 |          5 |          1 |          1 |          7 |
+| android\gradle\wrapper                                                                                |          1 |          5 |          1 |          1 |          7 |
+| ios                                                                                                   |          8 |        230 |          3 |         15 |        248 |
+| ios\Runner                                                                                            |          8 |        230 |          3 |         15 |        248 |
+| ios\Runner (Files)                                                                                    |          3 |         21 |          1 |          9 |         31 |
+| ios\Runner\Assets.xcassets                                                                            |          3 |        148 |          0 |          4 |        152 |
+| ios\Runner\Assets.xcassets\AppIcon.appiconset                                                         |          1 |        122 |          0 |          1 |        123 |
+| ios\Runner\Assets.xcassets\LaunchImage.imageset                                                       |          2 |         26 |          0 |          3 |         29 |
+| ios\Runner\Base.lproj                                                                                 |          2 |         61 |          2 |          2 |         65 |
+| lib                                                                                                   |         27 |      6,125 |         88 |        466 |      6,679 |
+| lib (Files)                                                                                           |          3 |         86 |          3 |         10 |         99 |
+| lib\pages                                                                                             |         24 |      6,039 |         85 |        456 |      6,580 |
+| lib\pages (Files)                                                                                     |          1 |         81 |          2 |         14 |         97 |
+| lib\pages\login                                                                                       |          4 |      1,141 |          2 |         57 |      1,200 |
+| lib\pages\tabs                                                                                        |         13 |      3,623 |         54 |        278 |      3,955 |
+| lib\pages\tabs\Home                                                                                   |          4 |      1,184 |         24 |        111 |      1,319 |
+| lib\pages\tabs\manage                                                                                 |          9 |      2,439 |         30 |        167 |      2,636 |
+| lib\pages\user                                                                                        |          6 |      1,194 |         27 |        107 |      1,328 |
+| test                                                                                                  |          1 |         14 |         10 |          7 |         31 |
++-------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+
+| filename                                                                                              | language        | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+
+| d:\CODE_Android\group\ssbaz\app_shop\analysis_options.yaml                                            | YAML            |          3 |         23 |          4 |         30 |
+| d:\CODE_Android\group\ssbaz\app_shop\android\app\build.gradle                                         | Groovy          |         53 |          5 |         12 |         70 |
+| d:\CODE_Android\group\ssbaz\app_shop\android\app\src\debug\AndroidManifest.xml                        | XML             |          4 |          3 |          1 |          8 |
+| d:\CODE_Android\group\ssbaz\app_shop\android\app\src\main\AndroidManifest.xml                         | XML             |         35 |          6 |          2 |         43 |
+| d:\CODE_Android\group\ssbaz\app_shop\android\app\src\main\java\com\example\app_shop\MainActivity.java | Java            |         69 |         73 |          9 |        151 |
+| d:\CODE_Android\group\ssbaz\app_shop\android\app\src\main\res\drawable-v21\launch_background.xml      | XML             |          4 |          7 |          2 |         13 |
+| d:\CODE_Android\group\ssbaz\app_shop\android\app\src\main\res\drawable\launch_background.xml          | XML             |          4 |          7 |          2 |         13 |
+| d:\CODE_Android\group\ssbaz\app_shop\android\app\src\main\res\values-night\styles.xml                 | XML             |          9 |          9 |          1 |         19 |
+| d:\CODE_Android\group\ssbaz\app_shop\android\app\src\main\res\values\styles.xml                       | XML             |          9 |          9 |          1 |         19 |
+| d:\CODE_Android\group\ssbaz\app_shop\android\app\src\profile\AndroidManifest.xml                      | XML             |         12 |          3 |          1 |         16 |
+| d:\CODE_Android\group\ssbaz\app_shop\android\build.gradle                                             | Groovy          |         27 |          0 |          5 |         32 |
+| d:\CODE_Android\group\ssbaz\app_shop\android\gradle.properties                                        | Java Properties |          3 |          0 |          1 |          4 |
+| d:\CODE_Android\group\ssbaz\app_shop\android\gradle\wrapper\gradle-wrapper.properties                 | Java Properties |          5 |          1 |          1 |          7 |
+| d:\CODE_Android\group\ssbaz\app_shop\android\settings.gradle                                          | Groovy          |          8 |          0 |          4 |         12 |
+| d:\CODE_Android\group\ssbaz\app_shop\ios\Runner\AppDelegate.h                                         | C++             |          4 |          0 |          3 |          7 |
+| d:\CODE_Android\group\ssbaz\app_shop\ios\Runner\AppDelegate.m                                         | Objective-C     |          9 |          1 |          4 |         14 |
+| d:\CODE_Android\group\ssbaz\app_shop\ios\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json      | JSON            |        122 |          0 |          1 |        123 |
+| d:\CODE_Android\group\ssbaz\app_shop\ios\Runner\Assets.xcassets\LaunchImage.imageset\Contents.json    | JSON            |         23 |          0 |          1 |         24 |
+| d:\CODE_Android\group\ssbaz\app_shop\ios\Runner\Assets.xcassets\LaunchImage.imageset\README.md        | Markdown        |          3 |          0 |          2 |          5 |
+| d:\CODE_Android\group\ssbaz\app_shop\ios\Runner\Base.lproj\LaunchScreen.storyboard                    | XML             |         36 |          1 |          1 |         38 |
+| d:\CODE_Android\group\ssbaz\app_shop\ios\Runner\Base.lproj\Main.storyboard                            | XML             |         25 |          1 |          1 |         27 |
+| d:\CODE_Android\group\ssbaz\app_shop\ios\Runner\main.m                                                | Objective-C     |          8 |          0 |          2 |         10 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\Route.dart                                                   | Dart            |         50 |          3 |          6 |         59 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\host.dart                                                    | Dart            |          1 |          0 |          0 |          1 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\main.dart                                                    | Dart            |         35 |          0 |          4 |         39 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\pages\login\ForgetPwdPage.dart                               | Dart            |        386 |          0 |         20 |        406 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\pages\login\LoginPage.dart                                   | Dart            |        279 |          1 |         20 |        300 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\pages\login\RegisterPage.dart                                | Dart            |        371 |          1 |         15 |        387 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\pages\login\UserAgreementPage.dart                           | Dart            |        105 |          0 |          2 |        107 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\pages\tabs.dart                                              | Dart            |         81 |          2 |         14 |         97 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\pages\tabs\Home\home.dart                                    | Dart            |        387 |         11 |         30 |        428 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\pages\tabs\Home\jump.dart                                    | Dart            |        472 |          4 |         44 |        520 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\pages\tabs\Home\like.dart                                    | Dart            |        211 |          4 |         24 |        239 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\pages\tabs\Home\search_jump.dart                             | Dart            |        114 |          5 |         13 |        132 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\pages\tabs\manage\apply.dart                                 | Dart            |        239 |          0 |         20 |        259 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\pages\tabs\manage\body.dart                                  | Dart            |        185 |          1 |         19 |        205 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\pages\tabs\manage\cropImage.dart                             | Dart            |         53 |          0 |          7 |         60 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\pages\tabs\manage\delete.dart                                | Dart            |        273 |         12 |         20 |        305 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\pages\tabs\manage\edit.dart                                  | Dart            |        721 |          8 |         38 |        767 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\pages\tabs\manage\main.dart                                  | Dart            |        724 |          8 |         38 |        770 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\pages\tabs\manage\manage.dart                                | Dart            |         12 |          1 |          8 |         21 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\pages\tabs\manage\manageHome.dart                            | Dart            |         57 |          0 |          6 |         63 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\pages\tabs\manage\search_list.dart                           | Dart            |        175 |          0 |         11 |        186 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\pages\user\EditHeadPortraitPage.dart                         | Dart            |        239 |          2 |         17 |        258 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\pages\user\EditIcon.dart                                     | Dart            |        224 |          2 |         28 |        254 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\pages\user\EditPwdPage.dart                                  | Dart            |        279 |          6 |         16 |        301 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\pages\user\UserInfoPage.dart                                 | Dart            |        100 |          5 |         12 |        117 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\pages\user\UserPage.dart                                     | Dart            |        206 |         10 |         23 |        239 |
+| d:\CODE_Android\group\ssbaz\app_shop\lib\pages\user\UserSettingsPage.dart                             | Dart            |        146 |          2 |         11 |        159 |
+| d:\CODE_Android\group\ssbaz\app_shop\pubspec.yaml                                                     | YAML            |         45 |         50 |         21 |        116 |
+| d:\CODE_Android\group\ssbaz\app_shop\test\widget_test.dart                                            | Dart            |         14 |         10 |          7 |         31 |
+| Total                                                                                                 |                 |      6,659 |        297 |        555 |      7,511 |
++-------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+
