@@ -1,0 +1,155 @@
+Date : 2024-07-04 12:34:12
+Directory : d:\CODE_Android\group\ssbaz\demo
+Total : 76 files,  26675 codes, 7727 comments, 7397 blanks, all 41799 lines
+
+Languages
++-----------------+------------+------------+------------+------------+------------+
+| language        | files      | code       | comment    | blank      | total      |
++-----------------+------------+------------+------------+------------+------------+
+| JavaScript      |          4 |     23,612 |      7,430 |      6,930 |     37,972 |
+| Java            |         54 |      2,439 |        227 |        315 |      2,981 |
+| XML             |          5 |        245 |         18 |         83 |        346 |
+| HTML            |          2 |        172 |          0 |         36 |        208 |
+| Batch           |          1 |        108 |         26 |         16 |        150 |
+| CSS             |          2 |         52 |          0 |          4 |         56 |
+| Java Properties |          3 |         21 |         26 |          7 |         54 |
+| Markdown        |          2 |         19 |          0 |          6 |         25 |
+| YAML            |          2 |          6 |          0 |          0 |          6 |
+| SQLite          |          1 |          1 |          0 |          0 |          1 |
++-----------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                             | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                |         76 |     26,675 |      7,727 |      7,397 |     41,799 |
+| . (Files)                                                                                                        |          5 |        249 |         28 |         35 |        312 |
+| .mvn                                                                                                             |          1 |          3 |         16 |          1 |         20 |
+| .mvn\wrapper                                                                                                     |          1 |          3 |         16 |          1 |         20 |
+| src                                                                                                              |         33 |     13,307 |      3,949 |      3,827 |     21,083 |
+| src\main                                                                                                         |         32 |     13,298 |      3,949 |      3,822 |     21,069 |
+| src\main\java                                                                                                    |         24 |      1,306 |        221 |        299 |      1,826 |
+| src\main\java\com                                                                                                |         24 |      1,306 |        221 |        299 |      1,826 |
+| src\main\java\com\example                                                                                        |         24 |      1,306 |        221 |        299 |      1,826 |
+| src\main\java\com\example (Files)                                                                                |          1 |          9 |          0 |          5 |         14 |
+| src\main\java\com\example\demo                                                                                   |         23 |      1,297 |        221 |        294 |      1,812 |
+| src\main\java\com\example\demo (Files)                                                                           |          1 |         13 |          0 |          3 |         16 |
+| src\main\java\com\example\demo\config                                                                            |          2 |         49 |         22 |         17 |         88 |
+| src\main\java\com\example\demo\controller                                                                        |          3 |        266 |         34 |         60 |        360 |
+| src\main\java\com\example\demo\jwt                                                                               |          2 |         97 |         20 |         24 |        141 |
+| src\main\java\com\example\demo\mapper                                                                            |          2 |         51 |          2 |         40 |         93 |
+| src\main\java\com\example\demo\pojo                                                                              |          9 |        154 |         31 |         67 |        252 |
+| src\main\java\com\example\demo\service                                                                           |          4 |        667 |        112 |         83 |        862 |
+| src\main\resources                                                                                               |          8 |     11,992 |      3,728 |      3,523 |     19,243 |
+| src\main\resources (Files)                                                                                       |          2 |         12 |          5 |          3 |         20 |
+| src\main\resources\mapper                                                                                        |          2 |         62 |          8 |         35 |        105 |
+| src\main\resources\static                                                                                        |          4 |     11,918 |      3,715 |      3,485 |     19,118 |
+| src\test                                                                                                         |          1 |          9 |          0 |          5 |         14 |
+| src\test\java                                                                                                    |          1 |          9 |          0 |          5 |         14 |
+| src\test\java\com                                                                                                |          1 |          9 |          0 |          5 |         14 |
+| src\test\java\com\example                                                                                        |          1 |          9 |          0 |          5 |         14 |
+| src\test\java\com\example\demo                                                                                   |          1 |          9 |          0 |          5 |         14 |
+| target                                                                                                           |         37 |     13,116 |      3,734 |      3,534 |     20,384 |
+| target\classes                                                                                                   |         36 |     13,109 |      3,734 |      3,534 |     20,377 |
+| target\classes (Files)                                                                                           |          2 |         12 |          5 |          3 |         20 |
+| target\classes\com                                                                                               |         28 |      1,117 |          6 |         11 |      1,134 |
+| target\classes\com\example                                                                                       |         28 |      1,117 |          6 |         11 |      1,134 |
+| target\classes\com\example (Files)                                                                               |          1 |          9 |          0 |          0 |          9 |
+| target\classes\com\example\demo                                                                                  |         27 |      1,108 |          6 |         11 |      1,125 |
+| target\classes\com\example\demo (Files)                                                                          |          1 |          9 |          0 |          0 |          9 |
+| target\classes\com\example\demo\config                                                                           |          2 |         38 |          0 |          0 |         38 |
+| target\classes\com\example\demo\controller                                                                       |          4 |        129 |          0 |          1 |        130 |
+| target\classes\com\example\demo\jwt                                                                              |          2 |         47 |          6 |          0 |         53 |
+| target\classes\com\example\demo\mapper                                                                           |          2 |         29 |          0 |          0 |         29 |
+| target\classes\com\example\demo\pojo                                                                             |          9 |        483 |          0 |          4 |        487 |
+| target\classes\com\example\demo\service                                                                          |          7 |        373 |          0 |          6 |        379 |
+| target\classes\mapper                                                                                            |          2 |         62 |          8 |         35 |        105 |
+| target\classes\static                                                                                            |          4 |     11,918 |      3,715 |      3,485 |     19,118 |
+| target\test-classes                                                                                              |          1 |          7 |          0 |          0 |          7 |
+| target\test-classes\com                                                                                          |          1 |          7 |          0 |          0 |          7 |
+| target\test-classes\com\example                                                                                  |          1 |          7 |          0 |          0 |          7 |
+| target\test-classes\com\example\demo                                                                             |          1 |          7 |          0 |          0 |          7 |
++------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+
+| filename                                                                                                         | language        | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+
+| d:\CODE_Android\group\ssbaz\demo\.mvn\wrapper\maven-wrapper.properties                                           | Java Properties |          3 |         16 |          1 |         20 |
+| d:\CODE_Android\group\ssbaz\demo\HELP.md                                                                         | Markdown        |         17 |          0 |          6 |         23 |
+| d:\CODE_Android\group\ssbaz\demo\mvnw.cmd                                                                        | Batch           |        108 |         26 |         16 |        150 |
+| d:\CODE_Android\group\ssbaz\demo\pom.xml                                                                         | XML             |        121 |          2 |         13 |        136 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\java\com\example\DemoApplication.java                                  | Java            |          9 |          0 |          5 |         14 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\java\com\example\demo\HelloController.java                             | Java            |         13 |          0 |          3 |         16 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\java\com\example\demo\config\FileServiceConfig.java                    | Java            |         33 |         21 |         12 |         66 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\java\com\example\demo\config\SpringbootConfigure.java                  | Java            |         16 |          1 |          5 |         22 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\java\com\example\demo\controller\AppController.java                    | Java            |        112 |         12 |         25 |        149 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\java\com\example\demo\controller\FileController.java                   | Java            |         56 |         19 |         11 |         86 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\java\com\example\demo\controller\UserController.java                   | Java            |         98 |          3 |         24 |        125 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\java\com\example\demo\jwt\JwtFilter.java                               | Java            |         55 |          3 |         12 |         70 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\java\com\example\demo\jwt\JwtUtil.java                                 | Java            |         42 |         17 |         12 |         71 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\java\com\example\demo\mapper\AppMapper.java                            | Java            |         24 |          2 |         19 |         45 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\java\com\example\demo\mapper\UserMapper.java                           | Java            |         27 |          0 |         21 |         48 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\java\com\example\demo\pojo\App.java                                    | Java            |         27 |          0 |          8 |         35 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\java\com\example\demo\pojo\AppScore.java                               | Java            |         29 |          4 |         11 |         44 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\java\com\example\demo\pojo\Corp.java                                   | Java            |         17 |          0 |          7 |         24 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\java\com\example\demo\pojo\DownloadFileInfo.java                       | Java            |         14 |         15 |          9 |         38 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\java\com\example\demo\pojo\FileInfo.java                               | Java            |         11 |          0 |          6 |         17 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\java\com\example\demo\pojo\Response.java                               | Java            |         12 |          0 |          3 |         15 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\java\com\example\demo\pojo\Score.java                                  | Java            |         15 |          3 |          8 |         26 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\java\com\example\demo\pojo\UploadFileInfo.java                         | Java            |          8 |          9 |          7 |         24 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\java\com\example\demo\pojo\User.java                                   | Java            |         21 |          0 |          8 |         29 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\java\com\example\demo\service\AppService.java                          | Java            |        160 |          5 |         20 |        185 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\java\com\example\demo\service\FileService.java                         | Java            |        258 |         90 |         30 |        378 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\java\com\example\demo\service\IconService.java                         | Java            |         44 |         10 |          8 |         62 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\java\com\example\demo\service\UserService.java                         | Java            |        205 |          7 |         25 |        237 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\resources\application.properties                                       | Java Properties |          9 |          5 |          3 |         17 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\resources\application.yaml                                             | YAML            |          3 |          0 |          0 |          3 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\resources\mapper\AppMapper.xml                                         | XML             |         34 |          0 |         19 |         53 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\resources\mapper\UserMapper.xml                                        | XML             |         28 |          8 |         16 |         52 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\resources\static\file.html                                             | HTML            |         86 |          0 |         18 |        104 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\resources\static\jquery.js                                             | JavaScript      |      6,895 |      1,911 |      2,076 |     10,882 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\resources\static\webuploader.css                                       | CSS             |         26 |          0 |          2 |         28 |
+| d:\CODE_Android\group\ssbaz\demo\src\main\resources\static\webuploader.js                                        | JavaScript      |      4,911 |      1,804 |      1,389 |      8,104 |
+| d:\CODE_Android\group\ssbaz\demo\src\test\java\com\example\demo\DemoApplicationTests.java                        | Java            |          9 |          0 |          5 |         14 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\application.properties                                           | Java Properties |          9 |          5 |          3 |         17 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\application.yaml                                                 | YAML            |          3 |          0 |          0 |          3 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\DemoApplication.class                                | Java            |          9 |          0 |          0 |          9 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\HelloController.class                           | Java            |          9 |          0 |          0 |          9 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\config\FileServiceConfig.class                  | Java            |         26 |          0 |          0 |         26 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\config\SpringbootConfigure.class                | Java            |         12 |          0 |          0 |         12 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\controller\AppController.class                  | Java            |         52 |          0 |          1 |         53 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\controller\FileController.class                 | Java            |         24 |          0 |          0 |         24 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\controller\UserController$1.class               | Java            |          8 |          0 |          0 |          8 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\controller\UserController.class                 | Java            |         45 |          0 |          0 |         45 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\jwt\JwtFilter.class                             | Java            |         14 |          6 |          0 |         20 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\jwt\JwtUtil.class                               | Java            |         33 |          0 |          0 |         33 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\mapper\AppMapper.class                          | Java            |          8 |          0 |          0 |          8 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\mapper\UserMapper.class                         | Java            |         21 |          0 |          0 |         21 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\pojo\App.class                                  | Java            |         97 |          0 |          0 |         97 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\pojo\AppScore.class                             | Java            |        115 |          0 |          0 |        115 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\pojo\Corp.class                                 | Java            |         35 |          0 |          0 |         35 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\pojo\DownloadFileInfo.class                     | Java            |         26 |          0 |          3 |         29 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\pojo\FileInfo.class                             | Java            |         27 |          0 |          1 |         28 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\pojo\Response.class                             | Java            |         45 |          0 |          0 |         45 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\pojo\Score.class                                | Java            |         39 |          0 |          0 |         39 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\pojo\UploadFileInfo.class                       | Java            |         31 |          0 |          0 |         31 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\pojo\User.class                                 | Java            |         68 |          0 |          0 |         68 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\service\AppService.class                        | Java            |         38 |          0 |          0 |         38 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\service\FileService$SliceDownloadRunnable.class | Java            |         15 |          0 |          0 |         15 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\service\FileService.class                       | Java            |        214 |          0 |          6 |        220 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\service\IconService.class                       | Java            |         27 |          0 |          0 |         27 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\service\UserService$1.class                     | Java            |          9 |          0 |          0 |          9 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\service\UserService$2.class                     | Java            |          9 |          0 |          0 |          9 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\com\example\demo\service\UserService.class                       | Java            |         61 |          0 |          0 |         61 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\mapper\AppMapper.xml                                             | XML             |         34 |          0 |         19 |         53 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\mapper\UserMapper.xml                                            | XML             |         28 |          8 |         16 |         52 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\static\file.html                                                 | HTML            |         86 |          0 |         18 |        104 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\static\jquery.js                                                 | JavaScript      |      6,895 |      1,911 |      2,076 |     10,882 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\static\webuploader.css                                           | CSS             |         26 |          0 |          2 |         28 |
+| d:\CODE_Android\group\ssbaz\demo\target\classes\static\webuploader.js                                            | JavaScript      |      4,911 |      1,804 |      1,389 |      8,104 |
+| d:\CODE_Android\group\ssbaz\demo\target\test-classes\com\example\demo\DemoApplicationTests.class                 | Java            |          7 |          0 |          0 |          7 |
+| d:\CODE_Android\group\ssbaz\demo\test.sql                                                                        | SQLite          |          1 |          0 |          0 |          1 |
+| d:\CODE_Android\group\ssbaz\demo\看这里.md                                                                          | Markdown        |          2 |          0 |          0 |          2 |
+| Total                                                                                                            |                 |     26,675 |      7,727 |      7,397 |     41,799 |
++------------------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+

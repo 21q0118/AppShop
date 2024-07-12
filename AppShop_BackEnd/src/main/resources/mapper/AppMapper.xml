@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.AppMapper">
+
+    <insert id="addApp" parameterType="com.example.demo.pojo.App"> insert into
+        table_app(appName,icon,version,corp,size,apk,tag,create_time,updateTime,id,`index`)
+        values(#{appName},#{icon},#{version},#{corp},#{size},#{apk},#{tag},#{create_time},#{updateTime},#{id},#{index})
+        </insert>
+
+    <insert id="addScore" parameterType="com.example.demo.pojo.Score"> INSERT INTO table_appscore
+        (appID, score, num) VALUES (#{appID}, #{score}, #{num}) </insert>
+
+    <update id="updateScore"> UPDATE table_appscore SET num=#{num}, score=#{score} WHERE
+        appID=#{appID}; </update>
+
+    <select id="searchApp" resultType="com.example.demo.pojo.AppScore"> select * from table_app
+        where appName like concat('%', #{appName}, '%') </select>
+
+    <select id="allApp" resultType="com.example.demo.pojo.AppScore"> select * from table_app JOIN
+        table_appscore ON table_app.id = table_appscore.appID </select>
+
+
+    <select id="appIdFind" resultType="com.example.demo.pojo.App"> select * from table_app where id
+        = #{id} </select>
+
+    <update id="updateApp"> UPDATE table_app SET appName=#{appName},
+        icon=#{icon},version=#{version}, size=#{size},apk=#{apk},tag=#{tag},updateTime=#{updateTime}
+        WHERE id=#{id}; </update>
+
+    <select id="findCoprByTel"> select corp from table_manager_corp where telephone=#{telephone}; </select>
+
+    <update id="updateIcon"> UPDATE table_app SET icon=#{iconPath} WHERE id=#{id}; </update>
+
+    <select id="splByTag" resultType="com.example.demo.pojo.App"> select * from table_app WHERE
+        tag=#{tag}; </select>
+
+    <select id="splByCorp" resultType="com.example.demo.pojo.AppScore"> SELECT * FROM table_app JOIN
+        table_appscore ON table_app.id = table_appscore.appID WHERE corp = #{corp} </select>
+
+
+    <delete id="delById"> delete from table_app WHERE id=#{id}; </delete>
+
+    <delete id="delByIdScore">DELETE FROM table_appscore WHERE appID = #{id};</delete>
+
+    <select id="getAppScore"> select score from table_appscore where appID=#{appID}; </select>
+
+    <select id="getAppScoreNum"> select num from table_appscore where appID=#{appID};</select>
+
+    <insert id="addAppScore"> insert into table_app_score(appId,userId,score,create_time)
+        values(#{appId},#{userId},#{score},#{create_time}); </insert>
+
+    <select id="getAppScoreByAppId" resultType="java.lang.Integer"> </select>
+</mapper>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>大文件上传下载</title>
+    <link rel="stylesheet" type="text/css" href="webuploader.css">
+    <script src="jquery.js"></script>
+    <script src="webuploader.js"></script>
+    <style>
+        #upload-container {
+            width: 100px;
+            height: 50px;
+            background: #94d3e7;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="upload-container"><span>文件拖拽上传</span></div>
+
+    <button id="picker" style="margin-top: 20px">分片上传</button>
+
+    <div id="upload-list"></div>
+
+    <hr />
+    <a href="http://localhost:8080/app/download">普通下载</a>
+
+
+</body>
+<script>
+    $(document).ready(function () {
+        // 点击上传容器时，触发文件选择
+        $('#upload-container').click(function () {
+            $("#picker").find('input').click();
+        });
+
+        // 初始化上传组件
+        const uploader = WebUploader.create({
+            auto: true,
+            swf: 'Uploader.swf', // swf文件路径
+            server: 'http://localhost:8080/upload', // 上传接口0
+            dnd: '#upload-container',
+            pick: '#picker',  // 内部根据当前运行创建
+            multiple: true,     // 选择多个文件
+            chunked: true,      // 开启分片上传
+            threads: 8,        // 并发上传数，默认3
+            chunkRetry: 8,     // 网络错误时重试次数
+            method: 'POST',
+            fileSizeLimit: 1024 * 1024 * 1024 * 10, // 文件总大小限制10G
+            fileSingleSizeLimit: 1024 * 1024 * 1024 * 1,  // 单个文件大小限制1G
+            fileVal: 'upload'
+        });
+
+        // 文件入队之前触发
+        uploader.on("beforeFileQueued", function (file) {
+            console.log(file.name);
+        });
+
+        // 文件入队后触发
+        uploader.on('fileQueued', function (file) {
+            $('#upload-list').append('<div id="' + file.id + '" class="item">' +
+                '<h4 class="info">' + file.name + '</h4>' +
+                '<p class="state">等待上传...</p>' +
+                '</div>');
+        });
+
+        // 上传过程中实时更新进度条
+        uploader.on('uploadProgress', function (file, percentage) {
+            var $li = $('#' + file.id),
+                $percent = $li.find('.progress .progress-bar');
+
+            // 避免重复创建进度条
+            if (!$percent.length) {
+                $percent = $('<div class="progress progress-striped active">' +
+                    '<div class="progress-bar" role="progressbar" style="width: 0%">' +
+                    '</div>' +
+                    '</div>').appendTo($li).find('.progress-bar');
+            }
+
+            $li.find('p.state').text('上传中');
+            $percent.css('width', percentage * 100 + '%');
+        });
+
+        // 文件上传成功
+        uploader.on('uploadSuccess', function (file) {
+            $('#' + file.id).find('p.state').text('已上传');
+        });
+
+        // 文件上传出错
+        uploader.on('uploadError', function (file) {
+            $('#' + file.id).find('p.state').text('上传出错');
+        });
+
+        // 文件上传完成
+        uploader.on('uploadComplete', function (file) {
+            $('#' + file.id).find('.progress').fadeOut();
+        });
+    });
+</script>
+
+</html>

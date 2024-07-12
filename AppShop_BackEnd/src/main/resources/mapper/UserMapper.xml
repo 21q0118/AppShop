@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.UserMapper">
+
+    <insert id="add" parameterType="com.example.demo.pojo.User"> insert into
+        table_user(userName,password,telephone,icon,petName,tag)
+        values(#{userName},#{password},#{telephone},#{icon},#{petName},#{tag}) </insert>
+
+    <select id="queryOne" resultType="com.example.demo.pojo.User"> select * from table_user where
+        telephone = #{telephone} </select>
+
+    <select id="queryTwo" resultType="com.example.demo.pojo.User"> select * from table_user where
+        telephone = #{telephone} and password = #{password} </select>
+
+    <update id="update" parameterType="com.example.demo.pojo.User"> update table_user SET
+        userName=#{userName},icon=#{icon},petName=#{petName} where telephone=#{telephone} </update>
+
+    <update id="updatePw" parameterType="com.example.demo.pojo.User"> update table_user SET
+        password=#{password} where telephone=#{telephone} </update>
+
+    <select id="searchUser" resultType="com.example.demo.pojo.User"> select * from table_user </select>
+
+    <select id="searchUserByTag" resultType="com.example.demo.pojo.User"> select * from table_user
+        WHERE tag=#{tag}; </select>
+
+    <delete id="delUser"> delete from table_user WHERE telephone=#{telephone}; </delete>
+
+    <delete id="delUserApp"> delete * from table_app WHERE telephone=#{telephone}; </delete>
+
+    <delete id="delUserCorp"> delete from table_manager_corp WHERE telephone=#{telephone}; </delete>
+
+    <update id="commitManager"> update table_user SET tag=0 where telephone=#{telephone}</update>
+
+    <insert id="addCorp" parameterType="com.example.demo.pojo.Corp"> insert into
+        table_manager_corp(telephone,corp,create_time) values(#{telephone},#{corp},#{create_time}) </insert>
+
+    <insert id="commitUser" parameterType="com.example.demo.pojo.Corp"> insert into 
+        table_commit(telephone,corp,create_time) values(#{telephone},#{corp},#{create_time}) </insert>
+
+    <delete id="commitDelete"> delete from table_commit WHERE telephone=#{telephone}; </delete>
+
+    <select id="allCommit" parameterType="com.example.demo.pojo.Corp"> select * from table_commit</select>
+    <!-- 
+    <select id="queryAll" resultType="com.example.demo.pojo.User">
+        select * from user_table
+    </select>
+
+    <select id="queryByName" resultType="com.example.demo.pojo.User">
+        select * from user_table where userName = #{userName}
+    </select> -->
+
+</mapper>
